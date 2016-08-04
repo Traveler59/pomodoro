@@ -1,5 +1,5 @@
 window.Button = React.createClass({
   render: function() {
-    return <button onClick={this.props.onBtnClick}>{this.props.type}</button>;
+    return <button className="btn" onClick={this.props.onBtnClick}>{this.props.type}</button>;
   }
 });

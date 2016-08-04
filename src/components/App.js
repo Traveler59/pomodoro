@@ -28,12 +28,14 @@ window.App = React.createClass({
         mode = this.state.longBreak;
         break;
     }
-    return <div>
+    return <div className="center">
       <Timer mode={mode}/>
-      <Button type="Помодоро" onBtnClick={this.onBtnClick}/>
-      <Button type="Пауза" onBtnClick={this.onBtnClick}/>
-      <Button type="Длинная пауза" onBtnClick={this.onBtnClick}/>
-      <Select onChange={this.onSelectChange}/>
+      <div className="block-center">
+        <Button type="Помодоро" onBtnClick={this.onBtnClick}/>
+        <Button type="Пауза" onBtnClick={this.onBtnClick}/>
+        <Button type="Длинная пауза" onBtnClick={this.onBtnClick}/>
+        <Select onChange={this.onSelectChange}/>
+      </div>
     </div>;
   }
 });

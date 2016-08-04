@@ -25,6 +25,6 @@ componentWillReceiveProps: function(nextProps) {
     var remaining = this.state.remaining / 1000;
     var minutes = Math.floor(remaining / 60);
     var seconds = remaining - 60 * minutes;
-    return <p>{minutes}:{seconds}</p>;
+    return <p className="timer">{minutes}:{seconds}</p>;
   }
 });

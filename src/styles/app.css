@@ -1,0 +1,30 @@
+.timer {
+    font-size: 95pt;
+	  font-weight: bold;
+    text-align: center;
+    color:#7cb518;
+	}
+.center {
+  width:40%;
+	margin:0px auto;
+	text-align:left;
+	border:5px solid #fbb02d;
+	background-color:#f3de2c;
+}
+.btn{
+  width: 100%;
+  max-width: 170px;
+}
+p, .btn, select{
+  color: #5c8001;
+}
+.block-center {
+  text-align: center;
+}
+.block-center div {
+  display: inline-block;
+  text-align: left;
+}
+body{
+  background-color: #fb6107;
+}
