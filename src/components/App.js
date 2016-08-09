@@ -29,7 +29,7 @@ window.App = React.createClass({
         break;
     }
     return <div className="center">
-      <Timer mode={mode}/>
+      <Timer mode={mode} modeName={this.state.mode}/>
       <div className="block-center">
         <Button type="Помодоро" onBtnClick={this.onBtnClick}/>
         <Button type="Пауза" onBtnClick={this.onBtnClick}/>
