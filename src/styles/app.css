@@ -1,4 +1,57 @@
-.clock {
+.menu-background{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.85);
+}
+.menu{
+  position: relative;
+  z-index: 1;
+  max-width: 550px;
+  margin: auto;
+  top: 100px;
+
+  height: 370px;
+  background-color: white;
+}
+
+#std-set{
+  position: relative;
+  top: 40px;
+  margin: 20px 20px;
+}
+#std-set p {
+  margin-left: 30px;
+}
+#timer-set{
+
+    position: relative;
+    top: 60px;
+    margin: 20px 20px;
+
+}
+#timer-set p {
+  margin-left: 30px;
+}
+#alarm-check{
+  position: relative;
+  top: 80px;
+  margin: 20px 20px;
+
+}
+#apply{
+  position: relative;
+  top: 70px;
+  left: 420px;
+  margin: 20px 20px;
+}
+
+
+
+.clock{
     font-size: 100pt;
     font-family: 'Josefin Slab', serif;
 	  font-weight: bold;
@@ -6,6 +59,7 @@
     color:#7cb518;
     text-shadow:  1px 1px 2px gray;
     margin-bottom: 20px;
+    margin-top: 100px;
 	}
 .mode{
   font-size: 22pt;
@@ -19,13 +73,23 @@
 	background-color: #f3de2c;
   padding-top: 20px;
   margin-top: 80px;
-  min-width: 540px;
+  min-width: 600px;
+  height: 450px;
 }
+img{
+
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  float: right;
+  cursor: pointer;
+}
+
 .btn{
   font-size: 1em;
   width: 120%;
   max-width: 190px;
-  margin: 5px;
+  margin: 40px 5px 0px 5px;
 }
 select{
   font-size: 1.1em;
@@ -34,10 +98,6 @@ select{
 p, .btn, select{
   color: #5c8001;
   font-family: sans-serif;
-}
-.note{
-  margin:30px 10px;
-  display: inline-block;
   font-size: 1.1em;
 }
 .block-center {
@@ -47,6 +107,8 @@ p, .btn, select{
   display: inline-block;
   text-align: left;
 }
+
+
 html{
   height: 100%;
   background-color: #fb6107;

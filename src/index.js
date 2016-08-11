@@ -1,4 +1,4 @@
 ReactDOM.render(
-  <App />,
+  <App className="app"/>,
   document.getElementById('root')
 );

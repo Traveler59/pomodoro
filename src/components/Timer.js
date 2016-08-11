@@ -21,8 +21,10 @@ window.Timer = React.createClass({
   timerExpired: function(){
     clearInterval(this.timer);
 //Сигнал
-    audio.load();
-    audio.play();
+    if(this.props.alarmTimout) {
+      audio.load();
+      audio.play();
+    }
   },
   tick: function(){
 //Тик таймера раз в секунду
