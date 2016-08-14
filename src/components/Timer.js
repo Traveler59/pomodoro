@@ -3,11 +3,11 @@ window.Timer = React.createClass({
   getInitialState: function() {
     return { remaining: 10000, currentMode:'Помодоро' };
   },
-  componentDidMount: function(){
+  componentDidMount: function() {
     this.setState({remaining:this.props.mode});
     this.timer = setInterval(this.tick, 1000);
   },
-  componentWillUnmount: function(){
+  componentWillUnmount: function() {
       clearInterval(this.timer);
   },
   componentWillReceiveProps: function(nextProps) {
@@ -42,7 +42,7 @@ window.Timer = React.createClass({
     if(seconds < 10) seconds = '0' + seconds;
     return <div>
       <p className="clock">{minutes}:{seconds}</p>
-      <p className="mode">{this.state.currentMode.toUpperCase()}</p>
+      <p className="mode">{ this.state.currentMode.toUpperCase() }</p>
     </div>;
   }
 });

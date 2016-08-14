@@ -1,12 +1,10 @@
 window.Settings = React.createClass({
-
-
   render: function() {
-
     return <div className="menu-background">
       <div className="menu">
         <div id="std-set">
-          <input type="radio" name="app-mode" /> Режим "Помодоро"
+          <input type="radio" name="app-mode" defaultChecked={true}/>
+          Режим "Помодоро"
           <p className="pause-set">
             <b>Короткая пауза:</b>
             <input type="radio" name="short" value="3" /> 3
@@ -22,19 +20,17 @@ window.Settings = React.createClass({
           </p>
       </div>
 
-
-
       <div id="timer-set">
         <input type="radio" name="app-mode" /> Режим таймера
         <p className="pause-set">
-          <input type="text" name="timer" size="5" />
+          <input id="timer-input" type="number" name="timer" size="5" placeholder="5"/>
         </p>
       </div>
 
-      <p id="alarm-check"><input id="alarm" type="checkbox" defaultChecked={true}/>Звуковой сигнал</p>
-
+      <p id="alarm-check">
+        <input id="alarm" type="checkbox" defaultChecked={true}/>
+      Звуковой сигнал</p>
       <button onClick={this.props.onClick} id="apply">Принять</button>
-
       </div>
     </div>;
   }

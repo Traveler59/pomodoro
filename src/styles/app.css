@@ -6,6 +6,7 @@
   right: 0;
   left: 0;
   background-color: rgba(0,0,0,.85);
+  display: none;
 }
 .menu{
   position: relative;
@@ -33,6 +34,12 @@
     margin: 20px 20px;
 
 }
+#timer-input {
+  -moz-appearance: textfield;
+}
+#timer-input::-webkit-inner-spin-button {
+  display: none;
+}
 #timer-set p {
   margin-left: 30px;
 }
@@ -40,7 +47,6 @@
   position: relative;
   top: 80px;
   margin: 20px 20px;
-
 }
 #apply{
   position: relative;
@@ -73,6 +79,7 @@
 	background-color: #f3de2c;
   padding-top: 20px;
   margin-top: 80px;
+  margin-bottom: 110px;
   min-width: 600px;
   height: 450px;
 }
@@ -110,7 +117,7 @@ p, .btn, select{
 
 
 html{
-  height: 100%;
+  min-height: 100%;
   background-color: #fb6107;
   background: linear-gradient(to right bottom, #fb6107, #fbb02d );
 }
