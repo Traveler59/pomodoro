@@ -1,4 +1,10 @@
-.menu-background{
+html {
+  min-height: 100%;
+  background-color: #fb6107;
+  background: linear-gradient(to right bottom, #fb6107, #fbb02d );
+}
+
+.menu-background {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -8,56 +14,59 @@
   background-color: rgba(0,0,0,.85);
   display: none;
 }
-.menu{
+
+.menu {
   position: relative;
   z-index: 1;
   max-width: 550px;
   margin: auto;
   top: 100px;
-
   height: 370px;
   background-color: white;
 }
 
-#std-set{
+#std-set {
   position: relative;
   top: 40px;
   margin: 20px 20px;
+  p {
+    margin-left: 30px;
+  }
 }
-#std-set p {
-  margin-left: 30px;
-}
-#timer-set{
 
-    position: relative;
-    top: 60px;
-    margin: 20px 20px;
-
+#timer-set {
+  position: relative;
+  top: 60px;
+  margin: 20px 20px;
+    
+  p {
+    margin-left: 30px;
+  }
 }
+
 #timer-input {
   -moz-appearance: textfield;
 }
+
 #timer-input::-webkit-inner-spin-button {
   display: none;
 }
-#timer-set p {
-  margin-left: 30px;
-}
-#alarm-check{
+
+
+#alarm-check {
   position: relative;
   top: 80px;
   margin: 20px 20px;
 }
-#apply{
+
+#apply {
   position: relative;
   top: 70px;
   left: 420px;
   margin: 20px 20px;
 }
 
-
-
-.clock{
+.clock {
     font-size: 100pt;
     font-family: 'Josefin Slab', serif;
 	  font-weight: bold;
@@ -66,11 +75,13 @@
     text-shadow:  1px 1px 2px gray;
     margin-bottom: 20px;
     margin-top: 100px;
-	}
-.mode{
+}
+  
+.mode {
   font-size: 22pt;
   font-family: 'Josefin Slab', sans;
 }
+
 .center {
   width:45%;
 	margin:0px auto;
@@ -80,11 +91,11 @@
   padding-top: 20px;
   margin-top: 80px;
   margin-bottom: 110px;
-  min-width: 600px;
+  min-width: 650px;
   height: 450px;
 }
-img{
 
+img {
   width: 40px;
   height: 40px;
   margin-right: 20px;
@@ -92,32 +103,28 @@ img{
   cursor: pointer;
 }
 
-.btn{
-  font-size: 1em;
-  width: 120%;
-  max-width: 190px;
+.btn {
+  font-size: 1.2em;
+  width: 200px;
+  height: 30px;
   margin: 40px 5px 0px 5px;
 }
-select{
+
+select {
   font-size: 1.1em;
   display: inline-block;
 }
+
 p, .btn, select{
   color: #5c8001;
   font-family: sans-serif;
   font-size: 1.1em;
 }
+
 .block-center {
   text-align: center;
-}
-.block-center div {
-  display: inline-block;
-  text-align: left;
-}
-
-
-html{
-  min-height: 100%;
-  background-color: #fb6107;
-  background: linear-gradient(to right bottom, #fb6107, #fbb02d );
+  div {
+    display: inline-block;
+    text-align: left;
+  }
 }

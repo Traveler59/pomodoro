@@ -3,17 +3,19 @@ import * as React from 'react';
 import { Settings } from './Settings.jsx';
 import { Timer } from './Timer.jsx';
 
-const WORK_TIME = 1500000;
-const DEFAULT_SHORT_BREAK = 300000;
-const DEFAULT_LONG_BREAK = 1200000;
+require('./../styles/app.scss');
+
+
 
 export class App extends React.Component {
   constructor() {
     super();
+    const defaultShortBreak = 300000;
+    const defaultLongBreak = 1200000;
     this.state = {
       mode: "Помодоро",
-      shortBreak: DEFAULT_SHORT_BREAK,
-      longBreak: DEFAULT_LONG_BREAK,
+      shortBreak: defaultShortBreak,
+      longBreak: defaultLongBreak,
       alarm: true
     }
   }
@@ -36,15 +38,15 @@ export class App extends React.Component {
     const isAlarm = document.getElementById('alarm').checked ? true : false;
 
     if (document.getElementsByName('app-mode')[0].checked) {
-      var shortBreak = this.state.shortBreak;
-      var longBreak = this.state.longBreak;
-      var radio = document.getElementsByName('short');
-      for (var i = 0; i < radio.length; i++)
-        if (radio[i].checked) shortBreak = this.parseToMilliseconds(radio[i].value);
+      let shortBreak = this.state.shortBreak;
+      let longBreak = this.state.longBreak;
+      const short = document.getElementsByName('short');
+      for (let i = 0; i < short.length; i++)
+        if (short[i].checked) shortBreak = this.parseToMilliseconds(short[i].value);
 
-      radio = document.getElementsByName('long');
-      for (var i = 0; i < radio.length; i++)
-        if (radio[i].checked) longBreak = this.parseToMilliseconds(radio[i].value);
+      const long = document.getElementsByName('long');
+      for (let i = 0; i < long.length; i++)
+        if (long[i].checked) longBreak = this.parseToMilliseconds(long[i].value);
 
       this.setState({
         mode: 'Помодоро',
@@ -66,10 +68,11 @@ export class App extends React.Component {
   onSettingsCall = () => this.toggleMenu();
 
   render() {
-    var mode = 0;
+    const workTime = 1500000;
+    let mode = 0;
     switch (this.state.mode) {
       case 'Помодоро':
-        mode = WORK_TIME;
+        mode = workTime;
         break;
       case 'Пауза':
         mode = this.state.shortBreak;
