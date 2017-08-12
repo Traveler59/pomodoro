@@ -1,5 +1,3 @@
-window.audio = new Audio('src/songs/alarm.mp3');
-
 import React from 'react';
 
 export class Timer extends React.Component {
@@ -8,11 +6,10 @@ export class Timer extends React.Component {
     this.state = {
       remaining: 10000, currentMode: 'Помодоро'
     };
-    console.log(this.state);
+    this.audio = new Audio('src/songs/alarm.mp3');
   }
   componentDidMount() {
     this.setState({ remaining: this.props.mode });
-    console.log(this.state);
     this.timer = setInterval(this.tick, 1000);
   }
   componentWillUnmount() {
@@ -28,15 +25,15 @@ export class Timer extends React.Component {
       //Истечение времени таймера
       if (this.state.remaining == 0) this.timerExpired();
     }, 1000);
-    audio.pause();
+    this.audio.pause();
   }
 
   timerExpired = () => {
     clearInterval(this.timer);
     //Сигнал
     if (this.props.alarmTimout) {
-      audio.load();
-      audio.play();
+      this.audio.load();
+      this.audio.play();
     }
   }
 
@@ -47,8 +44,8 @@ export class Timer extends React.Component {
     const seconds = remaining - 60 * minutes;
 
     return <div>
-      <p className="clock">{`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</p>
-      <p className="mode">{this.state.currentMode.toUpperCase()}</p>
+      <p className="timer">{`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</p>
+      <p className="modeName">{this.state.currentMode.toUpperCase()}</p>
     </div>;
   }
 }
